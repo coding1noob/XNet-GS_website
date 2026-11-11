@@ -1,0 +1,25 @@
+.roi-section { padding-top: 3rem; }
+.roi-help { color: #62675f; text-align: center; margin-bottom: 2.5rem; }
+.roi-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; align-items: start; }
+.roi-group { min-width: 0; }
+.roi-group > .title { margin-bottom: 14px; }
+.roi-view { position: relative; overflow: hidden; border-radius: 16px; background: #20241f; isolation: isolate; }
+.roi-view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; user-select: none; }
+.roi-base { clip-path: inset(0 0 0 var(--first)); }
+.roi-ours { clip-path: inset(0 0 0 var(--second)); }
+.roi-label { position: absolute; top: 12px; transform: translateX(-50%); z-index: 3; background: #000a; color: white; padding: 5px 10px; border-radius: 6px; font-size: clamp(12px, 1.4vw, 18px); pointer-events: none; }
+.roi-label-gt { left: calc(var(--first) / 2); }
+.roi-label-base { left: calc((var(--first) + var(--second)) / 2); }
+.roi-label-ours { left: calc((var(--second) + 100%) / 2); }
+.roi-handle { position: absolute; top: 0; bottom: 0; width: 30px; padding: 0; border: 0; background: transparent; transform: translateX(-50%); z-index: 4; cursor: ew-resize; touch-action: none; }
+.roi-handle::before { content: ''; position: absolute; top: 0; bottom: 0; left: calc(50% - 1px); width: 2px; background: white; }
+.roi-handle span { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 32px; height: 32px; line-height: 32px; border-radius: 50%; background: white; color: #242824; box-shadow: 0 2px 12px #0005; }
+.roi-first { left: var(--first); }
+.roi-second { left: var(--second); }
+.roi-handle:focus-visible span { outline: 3px solid #287b68; outline-offset: 3px; }
+.roi-handle:focus { z-index: 5; }
+.roi-scenes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
+.roi-scenes .button { font-size: .85rem; padding-left: .7em; padding-right: .7em; }
+.roi-scene[aria-pressed="true"] { background: #454943; color: white; border-color: #454943; }
+@media (max-width: 600px) { .roi-label { top: 8px; padding: 3px 6px; } .roi-view { border-radius: 10px; } .roi-scenes .button { font-size: .85rem; } }
+@media (max-width: 640px) { .roi-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; } }

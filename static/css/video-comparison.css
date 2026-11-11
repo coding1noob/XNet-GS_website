@@ -1,0 +1,17 @@
+.video-comparison { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 22px; background: #191b18; --split: 50%; }
+.video-comparison video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.comparison-ours { clip-path: inset(0 0 0 var(--split)); }
+.comparison-label { position: absolute; z-index: 2; padding: .3em .55em; color: white; background: #000a; border-radius: 7px; font-size: clamp(18px, 3vw, 32px); pointer-events: none; }
+.label-ours { bottom: 14px; right: 14px; }
+.label-baseline { top: 14px; left: 14px; }
+.comparison-divider { position: absolute; z-index: 3; left: var(--split); top: 0; bottom: 0; width: 3px; background: white; transform: translateX(-50%); pointer-events: none; }
+.comparison-divider span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; color: #242824; border-radius: 50%; width: 36px; height: 36px; text-align: center; line-height: 36px; box-shadow: 0 2px 12px #0005; }
+.comparison-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; z-index: 4; cursor: ew-resize; touch-action: pan-y; }
+.video-comparison:focus-within { outline: 3px solid #48766b; outline-offset: 4px; }
+.comparison-controls { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.comparison-scenes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 100%; }
+.comparison-scene { border-radius: 6px; }
+.comparison-scene[aria-pressed="true"] { background: #454943; color: white; border-color: #454943; }
+#comparison-status, .comparison-help { font-size: .85rem; color: #62675f; }
+.comparison-help { text-align: center; margin-top: 12px; }
+@media (max-width: 600px) { .video-comparison { border-radius: 12px; } .comparison-label { margin: 0; } }
