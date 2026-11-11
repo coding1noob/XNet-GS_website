@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/video-comparison.css">
+  <link rel="stylesheet" href="./static/css/video-comparison.css?v=dots-1">
   <link rel="stylesheet" href="./static/css/roi-comparison.css">
   <script defer src="./static/js/video-comparison.js?v=public-1"></script>
   <script defer src="./static/js/roi-comparison.js?v=public-1"></script>
@@ -36,15 +36,13 @@
       </div>
       <div class="comparison-controls">
         <div class="comparison-scenes" role="group" aria-label="Comparison scene">
-          <button class="button comparison-scene" type="button" data-scene="buaa-net" aria-pressed="true">BUAA Net</button>
-          <button class="button comparison-scene" type="button" data-scene="930-0" aria-pressed="false">930-0</button>
-          <button class="button comparison-scene" type="button" data-scene="1010-2_2" aria-pressed="false">1010-2</button>
-          <button class="button comparison-scene" type="button" data-scene="net6" aria-pressed="false">net6</button>
-          <button class="button comparison-scene" type="button" data-scene="bicycle" aria-pressed="false">bicycle</button>
+          <button class="comparison-scene" type="button" data-scene="buaa-net" aria-pressed="true" aria-label="Show BUAA Net" title="BUAA Net"><span aria-hidden="true"></span></button>
+          <button class="comparison-scene" type="button" data-scene="930-0" aria-pressed="false" aria-label="Show 930-0" title="930-0"><span aria-hidden="true"></span></button>
+          <button class="comparison-scene" type="button" data-scene="1010-2_2" aria-pressed="false" aria-label="Show 1010-2" title="1010-2"><span aria-hidden="true"></span></button>
+          <button class="comparison-scene" type="button" data-scene="net6" aria-pressed="false" aria-label="Show net6" title="net6"><span aria-hidden="true"></span></button>
+          <button class="comparison-scene" type="button" data-scene="bicycle" aria-pressed="false" aria-label="Show bicycle" title="bicycle"><span aria-hidden="true"></span></button>
         </div>
       </div>
-      <p class="comparison-help">Hover to pause and move the divider. Move away to resume.
-        On touch screens, drag to compare; tap the video to pause or resume.</p>
     </div>
   </div>
 </section>

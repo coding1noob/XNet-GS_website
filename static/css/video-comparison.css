@@ -9,9 +9,11 @@
 .comparison-range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; z-index: 4; cursor: ew-resize; touch-action: pan-y; }
 .video-comparison:focus-within { outline: 3px solid #48766b; outline-offset: 4px; }
 .comparison-controls { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
-.comparison-scenes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 100%; }
-.comparison-scene { border-radius: 6px; }
-.comparison-scene[aria-pressed="true"] { background: #454943; color: white; border-color: #454943; }
-#comparison-status, .comparison-help { font-size: .85rem; color: #62675f; }
-.comparison-help { text-align: center; margin-top: 12px; }
+.comparison-scenes { display: flex; justify-content: center; gap: 2px; max-width: 100%; }
+.comparison-scene { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+.comparison-scene span { width: 9px; height: 9px; border-radius: 50%; background: #c7cbc5; transition: background-color .15s, transform .15s; }
+.comparison-scene:hover span { background: #848c80; }
+.comparison-scene[aria-pressed="true"] span { background: #454943; transform: scale(1.35); }
+.comparison-scene:focus-visible { outline: 2px solid #48766b; outline-offset: 1px; }
+@media (prefers-reduced-motion: reduce) { .comparison-scene span { transition: none; } }
 @media (max-width: 600px) { .video-comparison { border-radius: 12px; } .comparison-label { margin: 0; } }
