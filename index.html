@@ -11,7 +11,7 @@
   <!-- Video comparison temporarily disabled; keep for restoration.
   <link rel="stylesheet" href="./static/css/video-comparison.css?v=dots-width-2">
   -->
-  <link rel="stylesheet" href="./static/css/roi-comparison.css?v=focus-fix-1">
+  <link rel="stylesheet" href="./static/css/roi-comparison.css?v=experiment-groups-1">
   <!-- Video comparison temporarily disabled; keep for restoration.
   <script defer src="./static/js/video-comparison.js?v=public-1"></script>
   -->
@@ -56,10 +56,12 @@
 -->
 
 <section class="section roi-section" id="static-comparisons"><div class="container is-max-desktop">
-<h2 class="title is-3 has-text-centered">Static Image Comparisons</h2>
+<h2 class="title is-3 has-text-centered">Experiments</h2>
 <p class="roi-help">Select an ROI number, then drag the two dividers to compare GT, 3DGS and Ours.</p>
+<section class="experiment-dataset" aria-labelledby="nettingscenes-title">
+<h3 class="title is-4 dataset-title" id="nettingscenes-title">NettingScenes</h3>
 <div class="roi-grid">
-<article class="roi-group"><h3 class="title is-4">102-2</h3>
+<article class="roi-group"><h4 class="title is-5">102-2</h4>
 <div class="roi-view" style="aspect-ratio:794/530;--first:33.333%;--second:66.667%">
 <img alt="102-2 / roi_00017 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/102-2/roi_00017/gt_roi.png"/>
 <img alt="102-2 / roi_00017 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/102-2/roi_00017/left_render_roi.png"/>
@@ -72,7 +74,7 @@
 
 <button aria-label="ROI 00021" aria-pressed="false" class="button roi-scene" data-roi='{"label": "102-2 / roi_00021", "path": "static/images/comparisons/website/102-2/roi_00021", "width": 793, "height": 529}' type="button">00021</button>
 </div></article>
-<article class="roi-group"><h3 class="title is-4">107-1</h3>
+<article class="roi-group"><h4 class="title is-5">107-1</h4>
 <div class="roi-view" style="aspect-ratio:790/528;--first:33.333%;--second:66.667%">
 <img alt="107-1 / roi_00008 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/107-1/roi_00008/gt_roi.png"/>
 <img alt="107-1 / roi_00008 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/107-1/roi_00008/left_render_roi.png"/>
@@ -86,7 +88,7 @@
 <button aria-label="ROI 00010" aria-pressed="false" class="button roi-scene" data-roi='{"label": "107-1 / roi_00010", "path": "static/images/comparisons/website/107-1/roi_00010", "width": 794, "height": 530}' type="button">00010</button>
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">930-0</h3>
+<article class="roi-group"><h4 class="title is-5">930-0</h4>
 <div class="roi-view" style="aspect-ratio:795/529;--first:33.333%;--second:66.667%">
 <img alt="930-0 / roi_00001 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/930-0/roi_00001/gt_roi.png"/>
 <img alt="930-0 / roi_00001 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/930-0/roi_00001/left_render_roi.png"/>
@@ -99,7 +101,7 @@
 
 <button aria-label="ROI 00017" aria-pressed="false" class="button roi-scene" data-roi='{"label": "930-0 / roi_00017", "path": "static/images/comparisons/website/930-0/roi_00017", "width": 790, "height": 527}' type="button">00017</button>
 </div></article>
-<article class="roi-group"><h3 class="title is-4">1010-2</h3>
+<article class="roi-group"><h4 class="title is-5">1010-2</h4>
 <div class="roi-view" style="aspect-ratio:792/528;--first:33.333%;--second:66.667%">
 <img alt="1010-2 / roi_00002 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/1010-2/roi_00002/gt_roi.png"/>
 <img alt="1010-2 / roi_00002 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/1010-2/roi_00002/left_render_roi.png"/>
@@ -118,7 +120,7 @@
 <button aria-label="ROI 00031" aria-pressed="false" class="button roi-scene" data-roi='{"label": "1010-2 / roi_00031", "path": "static/images/comparisons/website/1010-2/roi_00031", "width": 795, "height": 530}' type="button">00031</button>
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">buaa_net</h3>
+<article class="roi-group"><h4 class="title is-5">buaa_net</h4>
 <div class="roi-view" style="aspect-ratio:789/592;--first:33.333%;--second:66.667%">
 <img alt="buaa_net / roi_00002 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/buaa_net/roi_00002/gt_roi.png"/>
 <img alt="buaa_net / roi_00002 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/buaa_net/roi_00002/left_render_roi.png"/>
@@ -132,7 +134,7 @@
 <button aria-label="ROI 00008" aria-pressed="false" class="button roi-scene" data-roi='{"label": "buaa_net / roi_00008", "path": "static/images/comparisons/website/buaa_net/roi_00008", "width": 792, "height": 594}' type="button">00008</button>
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">net6</h3>
+<article class="roi-group"><h4 class="title is-5">net6</h4>
 <div class="roi-view" style="aspect-ratio:792/528;--first:33.333%;--second:66.667%">
 <img alt="net6 / roi_00003 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/net6/roi_00003/gt_roi.png"/>
 <img alt="net6 / roi_00003 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/net6/roi_00003/left_render_roi.png"/>
@@ -146,7 +148,7 @@
 
 <button aria-label="ROI 00005" aria-pressed="false" class="button roi-scene" data-roi='{"label": "net6 / roi_00005", "path": "static/images/comparisons/website/net6/roi_00005", "width": 792, "height": 529}' type="button">00005</button>
 </div></article>
-<article class="roi-group"><h3 class="title is-4">factory2</h3>
+<article class="roi-group"><h4 class="title is-5">factory2</h4>
 <div class="roi-view" style="aspect-ratio:794/446;--first:33.333%;--second:66.667%">
 <img alt="factory2 / roi_00000 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/factory2/roi_00000/gt_roi.png"/>
 <img alt="factory2 / roi_00000 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/factory2/roi_00000/left_render_roi.png"/>
@@ -158,7 +160,7 @@
 <button aria-label="ROI 00000" aria-pressed="true" class="button roi-scene" data-roi='{"label": "factory2 / roi_00000", "path": "static/images/comparisons/website/factory2/roi_00000", "width": 794, "height": 446}' type="button">00000</button>
 <button aria-label="ROI 00003" aria-pressed="false" class="button roi-scene" data-roi='{"label": "factory2 / roi_00003", "path": "static/images/comparisons/website/factory2/roi_00003", "width": 793, "height": 446}' type="button">00003</button>
 </div></article>
-<article class="roi-group"><h3 class="title is-4">sand_night3</h3>
+<article class="roi-group"><h4 class="title is-5">sand_night3</h4>
 <div class="roi-view" style="aspect-ratio:791/445;--first:33.333%;--second:66.667%">
 <img alt="sand_night3 / roi_00000 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/sand_night3/roi_00000/gt_roi.png"/>
 <img alt="sand_night3 / roi_00000 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/sand_night3/roi_00000/left_render_roi.png"/>
@@ -171,7 +173,7 @@
 <button aria-label="ROI 00003" aria-pressed="false" class="button roi-scene" data-roi='{"label": "sand_night3 / roi_00003", "path": "static/images/comparisons/website/sand_night3/roi_00003", "width": 793, "height": 446}' type="button">00003</button>
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">sand_sun2</h3>
+<article class="roi-group"><h4 class="title is-5">sand_sun2</h4>
 <div class="roi-view" style="aspect-ratio:794/446;--first:33.333%;--second:66.667%">
 <img alt="sand_sun2 / roi_00006 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/sand_sun2/roi_00006/gt_roi.png"/>
 <img alt="sand_sun2 / roi_00006 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/sand_sun2/roi_00006/left_render_roi.png"/>
@@ -184,7 +186,7 @@
 
 <button aria-label="ROI 00026" aria-pressed="false" class="button roi-scene" data-roi='{"label": "sand_sun2 / roi_00026", "path": "static/images/comparisons/website/sand_sun2/roi_00026", "width": 793, "height": 446}' type="button">00026</button>
 </div></article>
-<article class="roi-group"><h3 class="title is-4">tennis1</h3>
+<article class="roi-group"><h4 class="title is-5">tennis1</h4>
 <div class="roi-view" style="aspect-ratio:793/446;--first:33.333%;--second:66.667%">
 <img alt="tennis1 / roi_00004 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/tennis1/roi_00004/gt_roi.png"/>
 <img alt="tennis1 / roi_00004 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/tennis1/roi_00004/left_render_roi.png"/>
@@ -198,7 +200,7 @@
 
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">V109</h3>
+<article class="roi-group"><h4 class="title is-5">V109</h4>
 <div class="roi-view" style="aspect-ratio:795/446;--first:33.333%;--second:66.667%">
 <img alt="V109 / roi_00003 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/V109/roi_00003/gt_roi.png"/>
 <img alt="V109 / roi_00003 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/V109/roi_00003/left_render_roi.png"/>
@@ -211,7 +213,12 @@
 
 <button aria-label="ROI 00012" aria-pressed="false" class="button roi-scene" data-roi='{"label": "V109 / roi_00012", "path": "static/images/comparisons/website/V109/roi_00012", "width": 791, "height": 445}' type="button">00012</button>
 </div></article>
-<article class="roi-group"><h3 class="title is-4">garden</h3>
+</div>
+</section>
+<section class="experiment-dataset" aria-labelledby="mip-nerf360-title">
+<h3 class="title is-4 dataset-title" id="mip-nerf360-title">Mip-NeRF360</h3>
+<div class="roi-grid">
+<article class="roi-group"><h4 class="title is-5">garden</h4>
 <div class="roi-view" style="aspect-ratio:394/255;--first:33.333%;--second:66.667%">
 <img alt="garden / roi_00005 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/garden/roi_00005/gt_roi.png"/>
 <img alt="garden / roi_00005 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/garden/roi_00005/left_render_roi.png"/>
@@ -224,7 +231,7 @@
 <button aria-label="ROI 00005" aria-pressed="true" class="button roi-scene" data-roi='{"label": "garden / roi_00005", "path": "static/images/comparisons/website/garden/roi_00005", "width": 394, "height": 255}' type="button">00005</button>
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">bicycle</h3>
+<article class="roi-group"><h4 class="title is-5">bicycle</h4>
 <div class="roi-view" style="aspect-ratio:687/457;--first:33.333%;--second:66.667%">
 <img alt="bicycle / roi_00012 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/gt_roi.png"/>
 <img alt="bicycle / roi_00012 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/left_render_roi.png"/>
@@ -238,7 +245,7 @@
 
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">stump</h3>
+<article class="roi-group"><h4 class="title is-5">stump</h4>
 <div class="roi-view" style="aspect-ratio:453/301;--first:33.333%;--second:66.667%">
 <img alt="stump / roi_00013 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/stump/roi_00013/gt_roi.png"/>
 <img alt="stump / roi_00013 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/stump/roi_00013/left_render_roi.png"/>
@@ -251,7 +258,12 @@
 <button aria-label="ROI 00013" aria-pressed="true" class="button roi-scene" data-roi='{"label": "stump / roi_00013", "path": "static/images/comparisons/website/stump/roi_00013", "width": 453, "height": 301}' type="button">00013</button>
 
 </div></article>
-<article class="roi-group"><h3 class="title is-4">Train</h3>
+</div>
+</section>
+<section class="experiment-dataset" aria-labelledby="tnt-title">
+<h3 class="title is-4 dataset-title" id="tnt-title">TnT</h3>
+<div class="roi-grid">
+<article class="roi-group"><h4 class="title is-5">Train</h4>
 <div class="roi-view" style="aspect-ratio:521/293;--first:33.333%;--second:66.667%">
 <img alt="Train / roi_00020 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/Train/roi_00020/gt_roi.png"/>
 <img alt="Train / roi_00020 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/Train/roi_00020/left_render_roi.png"/>
@@ -262,7 +274,9 @@
 </div><div aria-label="Train ROI selection" class="roi-scenes" role="group">
 <button aria-label="ROI 00020" aria-pressed="true" class="button roi-scene" data-roi='{"label": "Train / roi_00020", "path": "static/images/comparisons/website/Train/roi_00020", "width": 521, "height": 293}' type="button">00020</button>
 </div></article>
-</div></div></section>
+</div>
+</section>
+</div></section>
 
 <footer class="footer"><div class="container has-text-centered">
 <p>Website template adapted from <a href="https://nerfies.github.io/">Nerfies</a>,

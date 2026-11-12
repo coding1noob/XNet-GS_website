@@ -1,5 +1,7 @@
 .roi-section { padding-top: 3rem; }
 .roi-help { color: #62675f; text-align: center; margin-bottom: 2.5rem; }
+.experiment-dataset + .experiment-dataset { margin-top: 3.5rem; }
+.dataset-title { margin-bottom: 1.5rem; }
 .roi-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; align-items: start; }
 .roi-group { min-width: 0; }
 .roi-group > .title { margin-bottom: 14px; }
