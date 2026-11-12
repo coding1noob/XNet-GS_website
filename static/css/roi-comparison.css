@@ -17,7 +17,7 @@
 .roi-first { left: var(--first); }
 .roi-second { left: var(--second); }
 .roi-handle:focus-visible span { outline: 3px solid #287b68; outline-offset: 3px; }
-.roi-handle:focus { z-index: 5; }
+.roi-handle:focus { z-index: 5; outline: none; }
 .roi-scenes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
 .roi-scenes .button { font-size: .85rem; padding-left: .7em; padding-right: .7em; }
 .roi-scene[aria-pressed="true"] { background: #454943; color: white; border-color: #454943; }
