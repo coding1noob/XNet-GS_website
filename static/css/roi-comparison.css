@@ -1,4 +1,5 @@
 .roi-section { padding-top: 3rem; }
+.roi-section > .container.is-max-desktop { width: 100%; max-width: 1280px; }
 .roi-section > .container > h2 { margin-bottom: 2.5rem; }
 .experiment-dataset + .experiment-dataset { margin-top: 3.5rem; }
 .dataset-title { margin-bottom: 1.5rem; }
