@@ -61,7 +61,7 @@ document.querySelectorAll('.roi-group').forEach(group => {
         }));
       } catch (error) { console.error('Could not load ROI comparison', error); return; }
       if (current !== generation) return;
-      view.style.aspectRatio = `${entry.width} / ${entry.height}`;
+      view.style.aspectRatio = view.dataset.cropAspect || `${entry.width} / ${entry.height}`;
       view.querySelectorAll('img').forEach((image, i) => {
         image.src = paths[i]; image.alt = `${entry.label} ${['GT', '3DGS', 'Ours'][i]}`;
       });
