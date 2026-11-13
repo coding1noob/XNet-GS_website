@@ -4,6 +4,7 @@
 .dataset-title { margin-bottom: 1.5rem; }
 .roi-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; align-items: start; }
 .roi-group { min-width: 0; }
+.roi-group-centered { grid-column: 1 / -1; width: calc((100% - 24px) / 2); justify-self: center; }
 .roi-group > .title { margin-bottom: 14px; }
 .roi-view { position: relative; overflow: hidden; border-radius: 16px; background: #20241f; isolation: isolate; }
 .roi-view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; user-select: none; }
@@ -30,3 +31,4 @@
 @media (prefers-reduced-motion: reduce) { .roi-scene span { transition: none; } }
 @media (max-width: 600px) { .roi-label { top: 8px; padding: 3px 6px; } .roi-view { border-radius: 10px; } }
 @media (max-width: 640px) { .roi-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+@media (max-width: 640px) { .roi-group-centered { width: 100%; } }
