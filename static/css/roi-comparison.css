@@ -1,4 +1,7 @@
 .method-figure { display: block; width: 100%; height: auto; margin: 0 auto; }
+.method-section > .container { width: 100%; }
+.method-slide[hidden] { display: none; }
+#methodology > .container > h2 { margin-bottom: 2rem; }
 .method-caption { margin-top: 1.25rem; line-height: 1.8; text-align: left; }
 .abstract-text { margin-top: 1.75rem; line-height: 1.8; }
 .roi-section { padding-top: 3rem; }

@@ -11,11 +11,12 @@
   <!-- Video comparison temporarily disabled; keep for restoration.
   <link rel="stylesheet" href="./static/css/video-comparison.css?v=dots-width-2">
   -->
-  <link rel="stylesheet" href="./static/css/roi-comparison.css?v=method-captions-1">
+  <link rel="stylesheet" href="./static/css/roi-comparison.css?v=methodology-1">
   <!-- Video comparison temporarily disabled; keep for restoration.
   <script defer src="./static/js/video-comparison.js?v=public-1"></script>
   -->
   <script defer src="./static/js/roi-comparison.js?v=drone-crop-1"></script>
+  <script defer src="./static/js/methodology.js?v=1"></script>
 </head>
 <body>
 <section class="hero"><div class="hero-body"><div class="container is-max-desktop has-text-centered">
@@ -66,35 +67,30 @@ Our framework enables disentangled modeling of netting and remaining regions wit
     </div>
   </div>
 </section>
-<section class="section method-section" id="grid-densification">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Grid Densification Strategy</h2>
-    <figure>
-      <img class="method-figure" src="./static/images/method/1.jpg" alt="Grid densification strategy diagram" loading="lazy" decoding="async">
-      <figcaption class="method-caption">We establish a local coordinate frame to align the sampling grid with the estimated netting plane.
+<section class="section method-section" id="methodology">
+<div class="container is-max-desktop">
+<h2 class="title is-3 has-text-centered">Methodology</h2>
+<div class="method-slides" aria-live="polite">
+<article class="method-slide" id="grid-densification" aria-labelledby="grid-densification-title"><h3 class="title is-4 has-text-centered" id="grid-densification-title">Grid Densification Strategy</h3><figure>
+<img alt="Grid densification strategy diagram" class="method-figure" decoding="async" loading="lazy" src="./static/images/method/1.jpg"/>
+<figcaption class="method-caption">We establish a local coordinate frame to align the sampling grid with the estimated netting plane.
 We then uniformly sample candidate grid points throughout the local point-cloud bounding box and retain those with nearby SfM points to densify the initialization.</figcaption>
-    </figure>
-  </div>
-</section>
-<section class="section method-section" id="bezier-constraints">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Gaussian-Based Line Reconstruction with B&eacute;zier Curve Constraints</h2>
-    <figure>
-      <img class="method-figure" src="./static/images/method/2.jpg" alt="Gaussian-based line reconstruction with Bezier curve constraints" loading="lazy" decoding="async">
-      <figcaption class="method-caption">We optimize B&eacute;zier curves under multiview Edge Mask supervision. Each curve carries M Gaussians that share thickness and opacity. During training, we adapt the curves through simplification, splitting, and pruning.</figcaption>
-    </figure>
-  </div>
-</section>
-<section class="section method-section" id="multiview-constraints">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Depth-Filtered Multiview Constraints</h2>
-    <figure>
-      <img class="method-figure" src="./static/images/method/3.jpg" alt="Depth-filtered multiview constraints diagram" loading="lazy" decoding="async">
-      <figcaption class="method-caption">We filter out pixels near depth discontinuities to avoid unreliable consistency constraints at thin-structure boundaries.
+</figure></article>
+<article class="method-slide" id="bezier-constraints" aria-labelledby="bezier-constraints-title" hidden><h3 class="title is-4 has-text-centered" id="bezier-constraints-title">Gaussian-Based Line Reconstruction with Bézier Curve Constraints</h3><figure>
+<img alt="Gaussian-based line reconstruction with Bezier curve constraints" class="method-figure" decoding="async" loading="lazy" src="./static/images/method/2.jpg"/>
+<figcaption class="method-caption">We optimize Bézier curves under multiview Edge Mask supervision. Each curve carries M Gaussians that share thickness and opacity. During training, we adapt the curves through simplification, splitting, and pruning.</figcaption>
+</figure></article>
+<article class="method-slide" id="multiview-constraints" aria-labelledby="multiview-constraints-title" hidden><h3 class="title is-4 has-text-centered" id="multiview-constraints-title">Depth-Filtered Multiview Constraints</h3><figure>
+<img alt="Depth-filtered multiview constraints diagram" class="method-figure" decoding="async" loading="lazy" src="./static/images/method/3.jpg"/>
+<figcaption class="method-caption">We filter out pixels near depth discontinuities to avoid unreliable consistency constraints at thin-structure boundaries.
 We then enforce multiview geometric and photometric consistency using round-trip reprojection errors and patch similarity at valid correspondences, suppressing floating Gaussians (blue) around geometrically consistent ones (red).</figcaption>
-    </figure>
-  </div>
-</section>
+</figure></article>
+</div>
+<div class="roi-scenes method-pagination" role="group" aria-label="Methodology figure selection">
+<button class="roi-scene method-dot" type="button" aria-label="Show Grid Densification Strategy" title="Grid Densification Strategy" aria-controls="grid-densification" aria-pressed="true"><span aria-hidden="true"></span></button>
+<button class="roi-scene method-dot" type="button" aria-label="Show Gaussian-Based Line Reconstruction with Bézier Curve Constraints" title="Gaussian-Based Line Reconstruction with Bézier Curve Constraints" aria-controls="bezier-constraints" aria-pressed="false"><span aria-hidden="true"></span></button>
+<button class="roi-scene method-dot" type="button" aria-label="Show Depth-Filtered Multiview Constraints" title="Depth-Filtered Multiview Constraints" aria-controls="multiview-constraints" aria-pressed="false"><span aria-hidden="true"></span></button>
+</div></div></section>
 
 <section class="section roi-section" id="static-comparisons"><div class="container is-max-desktop">
 <h2 class="title is-3 has-text-centered">Experiments</h2>
