@@ -11,7 +11,7 @@
   <!-- Video comparison temporarily disabled; keep for restoration.
   <link rel="stylesheet" href="./static/css/video-comparison.css?v=dots-width-2">
   -->
-  <link rel="stylesheet" href="./static/css/roi-comparison.css?v=drone2-centered-1">
+  <link rel="stylesheet" href="./static/css/roi-comparison.css?v=methods-1">
   <!-- Video comparison temporarily disabled; keep for restoration.
   <script defer src="./static/js/video-comparison.js?v=public-1"></script>
   -->
@@ -53,6 +53,37 @@
 
 
 -->
+
+<section class="section method-section" id="abstract">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Abstract</h2>
+    <img class="method-figure" src="./static/images/method/Abstract.jpg" alt="CN-GS overview" decoding="async">
+    <div class="content abstract-text">
+      <p>We propose CN-GS, a Gaussian Splatting method tailored to netting scene reconstruction.
+It first augments the sparse SfM initialization points with grid-sampled points, then uses Edge Masks to provide per image supervision and B&eacute;zier curves to impose 3D geometric constraints, guiding Gaussian primitives to reconstruct netting structures.
+We further propose a novel regularization strategy to improve Gaussians' geometric consistency.
+Our framework enables disentangled modeling of netting and remaining regions without relying on pretrained models such as Segment Anything.</p>
+    </div>
+  </div>
+</section>
+<section class="section method-section" id="grid-densification">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Grid Densification Strategy</h2>
+    <img class="method-figure" src="./static/images/method/1.jpg" alt="Grid densification strategy diagram" loading="lazy" decoding="async">
+  </div>
+</section>
+<section class="section method-section" id="bezier-constraints">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Gaussian-Based Line Reconstruction with B&eacute;zier Curve Constraints</h2>
+    <img class="method-figure" src="./static/images/method/2.jpg" alt="Gaussian-based line reconstruction with Bezier curve constraints" loading="lazy" decoding="async">
+  </div>
+</section>
+<section class="section method-section" id="multiview-constraints">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Depth-Filtered Multiview Constraints</h2>
+    <img class="method-figure" src="./static/images/method/3.jpg" alt="Depth-filtered multiview constraints diagram" loading="lazy" decoding="async">
+  </div>
+</section>
 
 <section class="section roi-section" id="static-comparisons"><div class="container is-max-desktop">
 <h2 class="title is-3 has-text-centered">Experiments</h2>
@@ -208,17 +239,6 @@
 </div><div aria-label="garden ROI selection" class="roi-scenes" role="group">
 <button aria-label="garden: ROI 00005" aria-pressed="true" class="roi-scene" data-roi='{"label": "garden / roi_00005", "path": "static/images/comparisons/website/garden/roi_00005", "width": 394, "height": 255}' title="ROI 00005" type="button"><span aria-hidden="true"></span></button>
 </div></article>
-<article class="roi-group"><h4 class="title is-5">bicycle</h4>
-<div class="roi-view" style="aspect-ratio:687/457;--first:33.333%;--second:66.667%">
-<img alt="bicycle / roi_00012 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/gt_roi.png"/>
-<img alt="bicycle / roi_00012 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/left_render_roi.png"/>
-<img alt="bicycle / roi_00012 Ours" class="roi-ours" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/right_render_roi.png"/>
-<span class="roi-label roi-label-gt">GT</span><span class="roi-label roi-label-base">3DGS</span><span class="roi-label roi-label-ours">Ours</span>
-<button aria-label="GT / 3DGS boundary" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33.333" class="roi-handle roi-first" role="slider" type="button"><span>↔</span></button>
-<button aria-label="3DGS / Ours boundary" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66.667" class="roi-handle roi-second" role="slider" type="button"><span>↔</span></button>
-</div><div aria-label="bicycle ROI selection" class="roi-scenes" role="group">
-<button aria-label="bicycle: ROI 00012" aria-pressed="true" class="roi-scene" data-roi='{"label": "bicycle / roi_00012", "path": "static/images/comparisons/website/bicycle/roi_00012", "width": 687, "height": 457}' title="ROI 00012" type="button"><span aria-hidden="true"></span></button>
-</div></article>
 <article class="roi-group"><h4 class="title is-5">stump</h4>
 <div class="roi-view" style="aspect-ratio:453/301;--first:33.333%;--second:66.667%">
 <img alt="stump / roi_00013 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/stump/roi_00013/gt_roi.png"/>
@@ -229,6 +249,17 @@
 <button aria-label="3DGS / Ours boundary" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66.667" class="roi-handle roi-second" role="slider" type="button"><span>↔</span></button>
 </div><div aria-label="stump ROI selection" class="roi-scenes" role="group">
 <button aria-label="stump: ROI 00013" aria-pressed="true" class="roi-scene" data-roi='{"label": "stump / roi_00013", "path": "static/images/comparisons/website/stump/roi_00013", "width": 453, "height": 301}' title="ROI 00013" type="button"><span aria-hidden="true"></span></button>
+</div></article>
+<article class="roi-group"><h4 class="title is-5">bicycle</h4>
+<div class="roi-view" data-crop-aspect="521/293" style="aspect-ratio:521/293;--first:33.333%;--second:66.667%">
+<img alt="bicycle / roi_00012 GT" class="roi-gt" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/gt_roi.png"/>
+<img alt="bicycle / roi_00012 3DGS" class="roi-base" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/left_render_roi.png"/>
+<img alt="bicycle / roi_00012 Ours" class="roi-ours" draggable="false" loading="lazy" src="static/images/comparisons/website/bicycle/roi_00012/right_render_roi.png"/>
+<span class="roi-label roi-label-gt">GT</span><span class="roi-label roi-label-base">3DGS</span><span class="roi-label roi-label-ours">Ours</span>
+<button aria-label="GT / 3DGS boundary" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33.333" class="roi-handle roi-first" role="slider" type="button"><span>↔</span></button>
+<button aria-label="3DGS / Ours boundary" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66.667" class="roi-handle roi-second" role="slider" type="button"><span>↔</span></button>
+</div><div aria-label="bicycle ROI selection" class="roi-scenes" role="group">
+<button aria-label="bicycle: ROI 00012" aria-pressed="true" class="roi-scene" data-roi='{"label": "bicycle / roi_00012", "path": "static/images/comparisons/website/bicycle/roi_00012", "width": 687, "height": 457}' title="ROI 00012" type="button"><span aria-hidden="true"></span></button>
 </div></article>
 <article class="roi-group"><h4 class="title is-5">Train</h4>
 <div class="roi-view" style="aspect-ratio:521/293;--first:33.333%;--second:66.667%">
